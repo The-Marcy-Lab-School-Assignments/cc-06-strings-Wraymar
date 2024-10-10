@@ -12,11 +12,12 @@ const reverseString = (str) => {
 //Q2
 const reverseZigZag = (str) => {
   let output = "";
-  for (let i = str.length - 1; i >= 0; i -= 2) {
-    output += str[i].toUpperCase();
-  }
-  for (let i = str.length - 2; i >= 0; i -= 1) {
-    output + str[i];
+  for (let i = str.length - 1; i >= 0; i--) {
+    if (i % 2 === 0) {
+      output += str[i].toUpperCase();
+    } else {
+      output += str[i];
+    }
   }
   return output;
 };
